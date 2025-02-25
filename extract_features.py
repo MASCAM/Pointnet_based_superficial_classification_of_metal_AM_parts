@@ -15,6 +15,7 @@ else:
     VALIDATION_BASE_PATH = ''
     INPUT_PATH = 'Positional_data/Simulated/{}_simulated_positions ({}).csv'
     OUTPUT_PATH = 'Features_data/Simulated/{}.csv'
+    VALIDATION_BASE_PATH = ''
 
 OUTPUT_FILENAME = FILENAME + '_features_extracted'
 

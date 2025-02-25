@@ -8,8 +8,8 @@ import open3d as o3d
 
 # Constants
 NUM_POINT = 2048
-INPUT_DIR = f'Segmented_data/Original/Input_best/'
-OUTPUT_DIR = f'Pre_Processed_data/3_classes/Original/HDF5/'
+INPUT_DIR = f'Segmented_data/Simulated'
+OUTPUT_DIR = f'Pre_Processed_data/3_classes/Simulated/HDF5/'
 
 def convert_5class_to_3class(labels):
     """Convert 5-class labels to 3-class labels by removing classes 1 and 3."""
@@ -151,9 +151,7 @@ def create_unified_h5_files(input_dir, output_dir):
     print(f"Found {len(csv_files)} CSV files")
     
     # Regular expression to match pattern names
-    # pattern_regex = r'((?:Basic_)?(?:Hollow|Holow)_[A-Za-z_]+)_(?:main_segmented|segmented)_positions'
-    #pattern_regex = r'(Basic_Hollow_Cylinder_85mm_main)_segmented_positions'
-    pattern_regex = r'(Real_Hollow_Cylinder_30mm_2025_02_13_v2)_segmented_positions'
+    pattern_regex = r'((?:Basic_)?(?:Hollow|Holow)_[A-Za-z_]+)_(?:main_segmented|segmented)_positions'
     
     # Dictionary to store files for each pattern
     pattern_files = {}
